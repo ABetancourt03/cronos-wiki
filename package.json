@@ -20,7 +20,7 @@
     "vite": "4.0.0"
   },
   "eslintConfig": {
-    "extends": [ "standard" ],
+    "extends": [ "./node_modules/standard/eslintrc.json" ],
     "rules": {
       "no-unused-vars": "warn"
     }
