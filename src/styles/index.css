@@ -1,6 +1,22 @@
+:root {
+  --bg-image: url(/assets/bg.png);
+  --main-color: #f39018;
+  --second-color: linear-gradient(141deg, rgb(169 68 66), #e7dd4e);
+  --text-color: #e4d943;
+  --hover: #e7dd4e;
+  --header-background: linear-gradient(transparent 0,#3a39394f 0%,#161616 96%);
+  --panel-heading: #212121;
+  --panel-body: #2c2b2b;
+  --scrollbar-color: #e7dd4e;
+  --scrollbar-bg: #212121;
+  --font-family: "Nunito Sans", "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --html-background: #161616;
+  --html-background-90: #161616be;
+}
+
 html {
   box-sizing: border-box;
-  font-family: 'Segoe UI';
+  font-family:  var(--font-family);
   font-size: 16px;
 }
 
@@ -14,4 +30,93 @@ body {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  background-image: var(--bg-image);
+  background-position: 0 -10rem;
+  background-size: cover;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-color: var(--html-background-90);
+}
+
+.header {
+  height: 240px;
+  width: 100%;
+  text-align: center;
+}
+
+.cronos-logo {
+  height: 240px;
+}
+
+.top-bar {
+  height: 60px;
+  background: #2c2b2b4d;
+  box-shadow: 0 0 5px #0003;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  font-family: Kanit,sans-serif;
+}
+
+.menu a {
+  transition: 1s;
+  text-decoration: none;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 22px;
+  color: #ffffff7a;
+  transition: 0.8s all;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu a.hover {
+  transition: 1s;
+  text-decoration: none;
+  background: var(--second-color);
+  height: 38px;
+  line-height: 38px;
+  padding: 5px 22px;
+  border-radius: 5px;
+  color: black;
+  border-bottom: 2px solid var(--hover);
+  transition: 0.7s all;
+}
+
+.menu a.hover:hover {
+  box-shadow: 0 0 14px 0.5px var(--hover);
 }
